@@ -166,3 +166,63 @@ This document summarizes essential questions and answers on data preprocessing, 
 - **Example:** Classifying images into three categories using OvR.
 
 ---
+# K-Nearest Neighbors (KNN) – Interview Quick Guide
+
+This guide provides simple, interview-ready answers for common KNN (K-Nearest Neighbors) questions. Inspired by GeeksforGeeks.
+
+---
+
+## 1. How does the KNN algorithm work?
+1. Choose the value of K (number of neighbors).
+2. Calculate the distance from the new data point to all training points.
+3. Pick the K nearest neighbors.
+4. The most common class among those neighbors is the prediction.
+
+---
+
+## 2. How do you choose the right K?
+Try different K values and use the one that gives the best validation accuracy. Too small K can be noisy, too large K can make the model less sensitive to patterns.
+
+---
+
+## 3. Why is normalization important in KNN?
+Since KNN relies on distance, features with bigger scales can dominate. Normalization scales all features equally, so each contributes fairly.
+
+---
+
+## 4. What is the time complexity of KNN?
+For every prediction, KNN checks all training points, so its time complexity is O(n × d), where n = number of training points and d = number of features.
+
+---
+
+## 5. What are pros and cons of KNN?
+**Pros:**  
+- Simple, easy to understand  
+- No training phase  
+- Works for multi-class problems
+
+**Cons:**  
+- Slow with large data  
+- Needs feature scaling  
+- Sensitive to noisy or irrelevant data
+
+---
+
+## 6. Is KNN sensitive to noise?
+Yes, KNN can be affected by noisy and incorrect data points, especially if K is small.
+
+---
+
+## 7. How does KNN handle multi-class problems?
+KNN works naturally for multi-class classification by picking the most common class among the K nearest neighbors.
+
+---
+
+## 8. What’s the role of distance metrics in KNN?
+Distance metrics (like Euclidean or Manhattan) decide how “closeness” is measured. The choice can affect which neighbors are picked and the final prediction.
+
+---
+
+## Reference
+Inspired by [GeeksforGeeks – K-Nearest Neighbours](https://www.geeksforgeeks.org/k-nearest-neighbours/)
+
